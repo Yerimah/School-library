@@ -25,20 +25,13 @@ class App
   end
 
   def list_all_books
-    if @books.empty?
-      puts 'No Available books! Add a book'
-    else
-      @books.each { |book| puts "[Book] Title: #{book.title}, Author: #{book.author}" }
-    end
-    back_to_menu
+    puts 'Database is empty! Add a book.' if @books.empty?
+    @books.each { |book| puts "[Book] Title: #{book.title}, Author: #{book.author}" }
   end
 
   def list_all_persons
-    puts 'No person Available.' if @persons.empty?
-    @persons.each do |person|
-      puts "[#{person.class.name}] Name: #{person.name}, Age: #{person.age}, id: #{person.id}"
-    end
-    back_to_menu
+    puts 'Database is empty! Add a person.' if @persons.empty?
+    @persons.each { |person| puts "[#{person.class.name}] Name: #{person.name}, Age: #{person.age}, id: #{person.id}" }
   end
 
   def create_person
