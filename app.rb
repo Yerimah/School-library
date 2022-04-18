@@ -60,7 +60,7 @@ class App
     when 'n'
       puts 'Student does not have parent permission, can not rent books'
     when 'y'
-      student = Student.new(age, name, parent_permission)
+      student = Student.new(name, age, parent_permission)
       @persons << student
       puts 'Entry successful'
     end
