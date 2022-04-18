@@ -42,6 +42,11 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@iamdeewyne](https://twitter.com/iamdeewyne)
 - LinkedIn: [@Daniel Yerimah](https://linkedin.com/in/daniel-yerimah)
 
+👤 **Benjmain Semah**
+
+- GitHub: [@BenjaminSemah](https://github.com/BenjaminSemah)
+- Twitter: [@BenjaminSemah](https://twitter.com/BenjaminSemah)
+- LinkedIn: [@BenjaminSemah](https://www.linkedin.com/in/benjaminsemah/)
 
 ## 🤝 Contributing
 
