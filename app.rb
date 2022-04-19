@@ -4,24 +4,14 @@ require './person'
 require './teacher'
 require './student'
 require './rental'
+require './console'
 
-class App
+class App < Console
   def initialize
+    super()
     @persons = []
     @books = []
     @rentals = []
-  end
-
-  def console_entry_point
-    puts 'Welcome to my School Library'
-    until list_of_options
-      input = gets.chomp
-      if input == '7'
-        puts 'Thanks for using my School Library App'
-        break
-      end
-      option input
-    end
   end
 
   def list_all_books
@@ -54,13 +44,15 @@ class App
     age = gets.chomp.to_i
     print 'Enter name: '
     name = gets.chomp
+    print 'Enter student classroom: '
+    classroom = gets.chomp
     print 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp.downcase
     case parent_permission
     when 'n'
       puts 'Student does not have parent permission, can not rent books'
     when 'y'
-      student = Student.new(age, name, parent_permission)
+      student = Student.new(classroom, age, name, parent_permission: false)
       @persons << student
       puts 'Entry successful'
     end
@@ -106,7 +98,7 @@ class App
     print 'Date: '
     date = gets.chomp.to_s
 
-    rental = Rental.new(date, @books[book_id], @persons[person_id])
+    rental = Rental.new(date, @persons[person_id], @books[book_id])
     @rentals << rental
 
     puts 'Rental created successfully'
