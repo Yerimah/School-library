@@ -44,13 +44,15 @@ class App < Console
     age = gets.chomp.to_i
     print 'Enter name: '
     name = gets.chomp
+    print 'Enter student classroom: '
+    classroom = gets.chomp
     print 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp.downcase
     case parent_permission
     when 'n'
       puts 'Student does not have parent permission, can not rent books'
     when 'y'
-      student = Student.new(age, 'classroom', name, parent_permission: false)
+      student = Student.new(classroom, age, name, parent_permission: false)
       @persons << student
       puts 'Entry successful'
     end
@@ -109,8 +111,7 @@ class App < Console
     puts 'Rented Books:'
     @rentals.each do |rental|
       if rental.person.id == id
-        puts "Person: #{rental.person.name}  Date: #{rental.date},
-        Book: '#{rental.book.title}' by #{rental.book.author}"
+        puts "Person: #{rental.person.name}  Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
       else
         puts 'No records where found for the given ID'
       end
