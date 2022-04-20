@@ -1,12 +1,12 @@
-def read_person_data
+def read_person_data(person_json)
   if File.exist?('./data/persons.json')
 
     persons = JSON.parse(File.read('./data/persons.json'))
     persons.map do |person|
       if person['occupation'] == 'Teacher'
-        Teacher.new(person['age'], person['specialization'], person['name'])
+        person_json << Teacher.new(person['age'], person['specialization'], person['name'])
       else
-        Student.new(person['age'], person['classroom'], person['name'], person['parent_permission'])
+        person_json << Student.new(person['age'], person['classroom'], person['name'], person['parent_permission'])
       end
     end
   else
@@ -14,22 +14,22 @@ def read_person_data
   end
 end
 
-def read_book
+def read_book(book_json)
   if File.exist?('./data/books.json')
     books = JSON.parse(File.read('./data/books.json'))
     books.map do |book|
-      Book.new(book['title'], book['author'])
+      book_json << Book.new(book['title'], book['author'])
     end
   else
     []
   end
 end
 
-def read_rentals
+def read_rentals(rental_json)
   if File.exist?('./data/rentals.json')
     rent = JSON.parse(File.read('./data/rentals.json'))
     rent.map do |rental|
-      Rental.new(rental['date'], @person[rental['person_index']], @books[rental['book_index']])
+      rental_json << Rental.new(rental['date'], @persons[rental['person_index']], @books[rental['book_index']])
     end
   else
     []

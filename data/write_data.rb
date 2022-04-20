@@ -10,6 +10,7 @@ def save_persons
     else
       {
         occupation: 'Student',
+        classroom: person.classroom,
         name: person.name,
         age: person.age,
         parent_permission: person.parent_permission
