@@ -21,7 +21,7 @@ git clone   https://github.com/Yerimah/School-library.git
 -Ruby
 
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running, follow these simple example steps.
 
 ### To enter Directory
 

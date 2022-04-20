@@ -1,0 +1,14 @@
+[
+    {
+        "occupation": "Student",
+        "name": "Dave",
+        "age": 11,
+        "parent_permission": true
+    },
+    {
+        "occupation": "Teacher",
+        "name": "Victor",
+        "age": 45,
+        "specialization": "English"
+    }
+]

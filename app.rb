@@ -5,6 +5,9 @@ require './teacher'
 require './student'
 require './rental'
 require './console'
+require 'json'
+require './data/read_data'
+require './data/write_data'
 
 class App < Console
   def initialize
@@ -12,6 +15,12 @@ class App < Console
     @persons = []
     @books = []
     @rentals = []
+  end
+
+  def load_data
+    read_person_data(@persons)
+    read_book(@books)
+    read_rentals(@rentals)
   end
 
   def list_all_books
