@@ -5,6 +5,9 @@ require './teacher'
 require './student'
 require './rental'
 require './console'
+require 'json'
+require './data/read_data'
+require './data/write_data'
 
 class App < Console
   def initialize
