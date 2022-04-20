@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/MethodLength
 def save_persons
   store_person = @persons.map do |person, _index, _id|
     if person.instance_of?(Teacher)
@@ -22,6 +23,7 @@ def save_persons
     file.puts(JSON.pretty_generate(store_person))
   end
 end
+# rubocop:enable Metrics/MethodLength
 
 def save_books
   file = File.open('./data/books.json', 'w')

@@ -4,10 +4,12 @@ require './classroom'
 class Student < Person
   attr_reader :classroom
 
+  # rubocop:disable Style/OptionalBooleanParameter
   def initialize(classroom, age, name = 'unknown', parent_permission = true)
     @classroom = classroom
     super(name, age, parent_permission)
   end
+  # rubocop:enable Style/OptionalBooleanParameter
 
   def play_hooky
     "¯\(ツ)/¯"

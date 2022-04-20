@@ -3,11 +3,11 @@ def read_person_data(person_json)
 
     persons = JSON.parse(File.read('./data/persons.json'))
     persons.map do |person|
-      if person['occupation'] == 'Teacher'
-        person_json << Teacher.new(person['age'], person['specialization'], person['name'])
-      else
-        person_json << Student.new(person['age'], person['classroom'], person['name'], person['parent_permission'])
-      end
+      person_json << if person['occupation'] == 'Teacher'
+                       Teacher.new(person['age'], person['specialization'], person['name'])
+                     else
+                       Student.new(person['age'], person['classroom'], person['name'], person['parent_permission'])
+                     end
     end
   else
     []
