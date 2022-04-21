@@ -7,16 +7,15 @@ describe Classroom do
       label = 'coding'
       @coding_class = Classroom.new(label)
 
-      @studentOne = Student.new(label, 14, 'Selina', true)
-
-      @coding_class.add_student(@studentOne)
+      @studentOne = Student.new(label, 14, 'Selina', true)    
     end
 
-    it 'checks for an instance of Classroom' do
+    it 'checks if label of classroom is coding' do
       expect(@coding_class.label).to eq('coding')
     end
 
-    it 'checks for an instance of Classroom' do
+    it 'checks if student is a member of Classroom' do
+      @coding_class.add_student(@studentOne)
       expect(@coding_class.students[0].name).to eq('Selina')
     end
   end
