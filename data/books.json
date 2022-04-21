@@ -1,6 +1,18 @@
 [
     {
         "title": "Legend of the seeker",
-        "author": "Jack Curry"
+        "author": "Jack Curry\n"
+    },
+    {
+        "title": "The 48 Laws of Power",
+        "author": "Robert Greene\n"
+    },
+    {
+        "title": "Deep Work",
+        "author": "Carl Newport\n"
+    },
+    {
+        "title": "Grit",
+        "author": "Angela Duckworth\n"
     }
 ]

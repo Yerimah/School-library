@@ -3,5 +3,20 @@
       "Date": "2022-04-20",
       "person_index": 0,
       "book_index": 0
+    },
+    {
+      "Date": "2022-01-26",
+      "person_index": 2,
+      "book_index": 1
+    },
+    {
+      "Date": "2022-02-14",
+      "person_index": 0,
+      "book_index": 1
+    },
+    {
+      "Date": "2022-03-06",
+      "person_index": 1,
+      "book_index": 2
     }
 ]
