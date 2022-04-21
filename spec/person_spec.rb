@@ -3,7 +3,6 @@ require_relative '../person'
 describe Person do
   context 'Test for the person class' do
     before(:each) do
-      id = Random.rand(1..1000)
       name = 'Daniel'
       age = 12
       parent_permission = true
