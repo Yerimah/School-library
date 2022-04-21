@@ -24,5 +24,10 @@ describe Person do
     it 'checks if person can use service' do
       expect(@person.can_use_services?).to be_truthy
     end
+
+    it 'checks if person does not have any rentals' do
+      expect(@person.rentals.length).to eq(0)
+      expect(@person.rentals).to eq([])
+    end
   end
 end

@@ -19,5 +19,10 @@ describe Book do
     it 'checks if author of book is Carol Dweck' do
       expect(@book.author).to eq('Carol Dweck')
     end
+
+    it 'checks if no book has been rented' do
+      expect(@book.rentals.length).to eq(0)
+      expect(@book.rentals).to eq([])
+    end
   end
 end
