@@ -10,5 +10,29 @@
         "name": "Victor",
         "age": 45,
         "specialization": "English"
+    },
+    {
+        "occupation": "Student",
+        "name": "Maria",
+        "age": 14,
+        "parent_permission": false
+    },
+    {
+        "occupation": "Teacher",
+        "name": "Joseph",
+        "age": 33,
+        "specialization": "JavaScript"
+    },
+    {
+        "occupation": "Student",
+        "name": "Terese",
+        "age": 24,
+        "parent_permission": true
+    },
+    {
+        "occupation": "Teacher",
+        "name": "Max",
+        "age": 47,
+        "specialization": "Ruby"
     }
 ]
